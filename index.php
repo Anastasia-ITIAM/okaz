@@ -1,13 +1,10 @@
 <?php
 require_once 'templates/header.php';
 require_once 'libs/listing.php';
-$listings = getListings();
+require_once 'libs/category.php';
 
-$categories = [
-    ["name" => "Jeux vidéos", "icon" => "controller" ],
-    ["name" => "Meubles", "icon" => "lamp"],
-    ["name" => "Vêtements", "icon" => "tag"]
-];
+$listings = getListings();
+$categories = getCategories();
 ?>
 
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -28,7 +25,7 @@ $categories = [
     <h2>Les dernières annonces</h2>
 
     <?php
-    foreach ($listings as $listing) {
+    foreach ($listings as $key => $listing) {
         require 'templates/listing_part.php';
     }
     ?>
@@ -38,7 +35,7 @@ $categories = [
     <h2 class="pb-2 border-bottom">Les catégories</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
     <?php
-    foreach ($categories as $category) {
+    foreach ($categories as $key => $category) {
         require 'templates/category_part.php';
     }
     ?>

@@ -5,6 +5,6 @@
             <div>
                 <h3 class="fs-2 text-body-emphasis"><?= $category["name"]?></h3>
                 <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p> 
-                <a href="#" class="btn btn-primary">Voir la catégorie</a>
+                <a href="#" class="btn btn-primary stw-100">Voir la catégorie</a>
             </div>
         </div>

@@ -13,11 +13,27 @@ $listings = getListings();
     <div class="col-md-3">
         <form action="" method="get">
         <h2>Filtres</h2>
-        <div>
+        <div class="p-3 border-bottom">
         <input type="text" name="search" id="search" class="form-control" placeholder="Rechercher">
+        </div>
+        <div class="p-3 border-bottom">
+            <label for="price">Prix</label>
+            <div class="input-group">
+                <input type="number" name="min_price" id="min_price" class="form-control" placeholder="Prix minimum">
+                <span class="input-group-text">€</span>
+            </div>
+        
+            <div class="input-group">
+                <input type="number" name="max_price" id="max_price" class="form-control" placeholder="Prix maximum">
+                <span class="input-group-text">€</span>
+            </div>
+        </div>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary w-100">Filtrer</button>
         </div>
         </form>
 </div>
+
 
 
 <div class="col-md-9">
