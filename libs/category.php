@@ -1,9 +1,9 @@
 <?php
 
-function getCategories() {
-    return [
-    ["name" => "Jeux vidéos", "icon" => "controller" ],
-    ["name" => "Meubles", "icon" => "lamp"],
-    ["name" => "Vêtements", "icon" => "tag"]
-];
+function getCategories(PDO $pdo)
+{
+    $sql = "SELECT * FROM category ORDER BY name ASC";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    return $query->fetchAll(PDO::FETCH_ASSOC);
 }
